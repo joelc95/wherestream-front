@@ -1,0 +1,91 @@
+* {
+	font-family: monospace;
+}
+
+/* Card CSS */
+
+.card {
+	display: inline-block;
+	height: 400px;
+	width: 300px;
+	overflow-y: hidden;
+	border-radius: 10px;
+	z-index: 1;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	overflow-x: hidden;
+}
+
+.card-overlay {
+	background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.624));
+	display: inline-block;
+	height: 400px;
+	width: 300px;
+	border-radius: 10px;
+	position: absolute;
+}
+
+.card-info {
+	position: absolute;
+	width: 300px;
+	z-index: 1;
+	color: rgb(236, 236, 236);
+	text-shadow: 28px 28px 17px rgba(206,89,55,0);
+}
+
+.card-info * {
+	margin: 1%;
+}
+
+.card-image {
+	z-index: -3;
+	min-height: 100%;
+	max-width: 100%;
+}
+
+.ellipsis {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.ellipsis p:nth-child(1) {
+  animation: ellipsis1 1.5s infinite;
+}
+.ellipsis p:nth-child(2) {
+  animation: ellipsis2 1.5s infinite;
+}
+.ellipsis p:nth-child(3) {
+  animation: ellipsis3 1.5s infinite;
+}
+
+@keyframes ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1);
+  }
+}
+@keyframes ellipsis2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes ellipsis3 {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1);
+  }
+}
+
