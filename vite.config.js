@@ -7,5 +7,5 @@ export default defineConfig({
 	define: {
 		'process.env': {}
 	},
-	base: "https://joelc95.github.io/wherestream-front/"
+	base: "/wherestream-front/"
 })
