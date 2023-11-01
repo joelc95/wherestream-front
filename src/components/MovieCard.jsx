@@ -19,7 +19,6 @@ export const MovieCard = ({item, index}) => {
 		return
 	}
 
-
 	return (
 		<>
 			<div onClick={(e) => closeCardInfo(e)} className="card-modal-wrapper top-0 fixed bg-black bg-opacity-50 z-10 h-screen w-full hidden">
@@ -57,7 +56,7 @@ export const MovieCard = ({item, index}) => {
 											<img
 												className="region-flag max-w-[30px] h-fit"
 												alt={i}
-												src={`../../public/3x2/${i}.svg`}
+												src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${i}.svg`}
 											/>
 											<p className='region-iso-code m-2'>{i}</p>
 										</div>
