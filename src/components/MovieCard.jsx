@@ -57,7 +57,7 @@ export const MovieCard = ({item, index}) => {
 											<img
 												className="region-flag max-w-[30px] h-fit"
 												alt={i}
-												src={`../../public/3x2/${i}.svg`}
+												src={`/3x2/${i}.svg`}
 											/>
 											<p className='region-iso-code m-2'>{i}</p>
 										</div>
