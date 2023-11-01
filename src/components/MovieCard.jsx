@@ -51,13 +51,13 @@ export const MovieCard = ({item, index}) => {
 						<div className='min-w-[65%]'>
 							<h2 className='text-lg font-bold m-2'>Streaming in:</h2>
 							<div id={`regions-container-${index}`} className="flex gap-2 flex-row flex-wrap content-start p-4 overflow-auto bg-slate-900 m-2 rounded-md h-[90%] sm:w-[65%] lg:w-[75%] xl:w-[95%]">
-								{item[`${provider}`].length > 0 ?  item[`${provider}`].map(i => {
+								{item[`${provider}`].length > 0 ?  item[`${provider}`].map((i, index) => {
 									return (
-										<div className="region-div inline-flex w-[60px] max-h-[30px] m-0  items-center">
+										<div key={index} className="region-div inline-flex w-[60px] max-h-[30px] m-0  items-center">
 											<img
 												className="region-flag max-w-[30px] h-fit"
 												alt={i}
-												src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${i}.svg`}
+												src={`../../public/3x2/${i}.svg`}
 											/>
 											<p className='region-iso-code m-2'>{i}</p>
 										</div>
