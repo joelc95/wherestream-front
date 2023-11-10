@@ -23,12 +23,12 @@ export const MovieCard = ({item, index}) => {
 		<>
 			<div onClick={(e) => closeCardInfo(e)} className="card-modal-wrapper top-0 fixed bg-black bg-opacity-50 z-10 h-screen w-full hidden">
 				<div className="card-modal fixed shadow-2xl ml-[10vw] mt-[10vh] h-[80vh] w-[80vw] z-20 bg-white hidden rounded-lg">
-					<div className="modal-header flex justify-between text-slate-100 bg-slate-800 h-[10%] p-2 rounded-t-lg sm:h-[12%] md:h-[10%]">
-						<div>
-							<h2 className="w-fit text-lg font-bold">{item.title ? item.title : item.name} ({item.release_date ? item.release_date.slice(0,4) : item.first_air_date ? item.first_air_date.slice(0,4) : '--'})</h2>
-							<h4 className="w-fit">Rating: {item.vote_average.toFixed(1)}</h4>
+					<div className="modal-header flex-row justify-between text-slate-100 bg-slate-800 p-2 rounded-t-lg ">
+						<div className='w-full p-2'>
+							<h2 className="font-bold text-lg">{item.title ? item.title : item.name} ({item.release_date ? item.release_date.slice(0,4) : item.first_air_date ? item.first_air_date.slice(0,4) : '--'})</h2>
+							<h4 className="">Rating: {item.vote_average.toFixed(1)}</h4>
 						</div>
-						<select onChange={(e) => setProvider(e.target.value)} name="providers" id={`providers-${index}`} className="provider-list end-10 bg-slate-900 border-green-300 border-solid border-2 p-2 rounded-md text-green-300 text-lg font-bold ml-2">
+						<select onChange={(e) => setProvider(e.target.value)} name="providers" id={`providers-${index}`} className="w-full provider-list end-10 bg-slate-900 hover:bg-slate-700 cursor-pointer border-green-300 border-solid border-2 p-2 rounded-md text-green-300 text-lg font-bold">
 							<option value="netflix">Netflix</option>
 							<option value="disneyPlus">Disney+</option>
 							<option value="amazonPrime">Amazon Prime</option>
@@ -46,7 +46,7 @@ export const MovieCard = ({item, index}) => {
 						</select>
 					</div>
 					<div className="modal-info bg-slate-800 text-slate-100 h-[90%] flex p-2 rounded-b-lg">
-						<img className='sm:max-h-[450px] lg:max-h-[550px] m-4 rounded-md' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="poster not found :/" />
+						<img className='hidden sm:block sm:max-h-[450px] lg:max-h-[550px] m-4 rounded-md' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="poster not found :/" />
 						<div className='min-w-[65%]'>
 							<h2 className='text-lg font-bold m-2'>Streaming in:</h2>
 							<div id={`regions-container-${index}`} className="flex gap-2 flex-row flex-wrap content-start p-4 overflow-auto bg-slate-900 m-2 rounded-md h-[90%] sm:w-[65%] lg:w-[75%] xl:w-[95%]">

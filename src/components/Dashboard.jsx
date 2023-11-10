@@ -22,7 +22,7 @@ export default function Dashboard() {
 		<>
 			<div className='flex justify-center'>
 				{/* <ModeButton tvOrMovieHandler={tvOrMovieHandler}/> */}
-				<div onClick={tvOrMovieHandler} className="flex cursor-pointer bg-slate-800 text-slate-100 border-green-300 border border-r-0 h-16 w-32 rounded-l-2xl hover:bg-slate-700 hover:text-green-300">{ tvOrMovie == 'movie' ? <span className='flex items-center justify-center text-[20px] w-full'><FaFilm className=' scale-110' /><p className='w-fit'>&nbsp;Movies</p></span> : <span className='flex items-center justify-center text-[20px] w-full'><PiTelevisionBold className='scale-110' /><p className='w-fit'>&nbsp;TV</p></span> }</div>
+				<div onClick={tvOrMovieHandler} className="flex cursor-pointer bg-slate-800 text-slate-100 border-green-300 border border-r-0 h-16 w-16 sm:w-32 rounded-l-2xl hover:bg-slate-700 hover:text-green-300">{ tvOrMovie == 'movie' ? <span className='flex items-center justify-center text-[20px] w-full'><FaFilm className=' scale-110' /><p className='w-fit hidden sm:block'>&nbsp;Movies</p></span> : <span className='flex items-center justify-center text-[20px] w-full'><PiTelevisionBold className='scale-110' /><p className='w-fit hidden sm:block'>&nbsp;TV</p></span> }</div>
 				<SearchBar tvOrMovie={tvOrMovie} setSearchResults={setSearchResults} setLoading={setLoading} setWelcome={setWelcome}/>
 			</div>
 			{ welcome && <WelcomeMessage /> }
@@ -46,8 +46,8 @@ const ModeButton = ({ tvOrMovieHandler }) => {
 const WelcomeMessage = () => {
 	return (
 		<div className='flex flex-col items-center p-14 text-slate-100'>
-			<h2 className='font-bold text-[28px]'>Welcome to <i className='text-green-300'><b>wherestream</b></i>!</h2>
-			<div className='text-[20px] text-center'>
+			<h2 className='font-bold text-lg lg:text-md'>Welcome to <i className='text-green-300'><b>wherestream</b></i>!</h2>
+			<div className='text-lg lg:text-md text-center'>
 				<br />
 				<p>Easily find <i className='text-green-300 font-bold'>where</i> in the world you can stream your favourite movies and TV shows 🌍</p>
 				<br />
