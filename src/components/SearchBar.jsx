@@ -16,7 +16,12 @@ export const SearchBar = ({ tvOrMovie, setSearchResults, setLoading, setWelcome 
 		setLoading(true)
 		try {
 			// Send request to my back end private API call
-			let res = await fetch(`https://wherestream.onrender.com/${tvOrMovie}/${input}`)
+			// MAIN URL
+			let mainUrl = `https://wherestream.onrender.com/${tvOrMovie}/${input}`;
+			// DEV URL
+			let devUrl = `http://localhost:5173/${tvOrMovie}/${input}`;
+			let res = await fetch(devUrl)
+
 			let json = await res.json()
 			setSearchResults(json.results)
 		} catch (error) {
