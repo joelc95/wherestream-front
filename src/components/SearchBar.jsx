@@ -19,7 +19,7 @@ export const SearchBar = ({ tvOrMovie, setSearchResults, setLoading, setWelcome 
 			// MAIN URL
 			let mainUrl = `https://wherestream.onrender.com/${tvOrMovie}/${input}`;
 			// DEV URL
-			let devUrl = `http://localhost:5173/${tvOrMovie}/${input}`;
+			let devUrl = `http://localhost:8383/${tvOrMovie}/${input}`;
 			let res = await fetch(devUrl)
 
 			let json = await res.json()
